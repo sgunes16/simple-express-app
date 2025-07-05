@@ -1,0 +1,31 @@
+[project]
+id = "simple-express-app"
+name = "Simple Express App"
+version = "1.0.0"
+
+[build]
+# Build configuration
+[[build.env]]
+name = "NODE_ENV"
+value = "production"
+
+[[build.env]]
+name = "PORT"
+value = "3000"
+
+[io.buildpacks.lifecycle.metadata]
+# Port mapping for Dokku
+[[io.buildpacks.lifecycle.metadata.processes]]
+type = "web"
+command = "npm start"
+ports = ["3000"]
+
+[dokku]
+# Dokku specific configuration
+port = 3000
+domain = "simple-express-app.local"
+
+[deploy]
+# Deploy configuration
+port = 3000
+health_check = "/"
