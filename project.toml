@@ -12,7 +12,7 @@ value = "production"
 
 [[build.env]]
 name = "PORT"
-value = "3000"
+value = "5000"
 
 [[build.buildpacks]]
 uri = "heroku/nodejs"
@@ -21,7 +21,7 @@ uri = "heroku/nodejs"
 description = "Simple Express.js application"
 
 [metadata.dokku]
-port = 3000
+port = 5000
 
 [metadata.deploy]
-port = 3000
+port = 5000
