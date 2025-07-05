@@ -6,7 +6,6 @@ id = "simple-express-app"
 name = "Simple Express App"
 version = "1.0.0"
 
-[build]
 [[build.env]]
 name = "NODE_ENV"
 value = "production"
@@ -15,7 +14,6 @@ value = "production"
 name = "PORT"
 value = "3000"
 
-# Cloud Native Buildpack port configuration
 [[build.buildpacks]]
 uri = "heroku/nodejs"
 
